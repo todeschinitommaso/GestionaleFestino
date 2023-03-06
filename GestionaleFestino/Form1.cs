@@ -23,6 +23,7 @@ namespace GestionaleFestino
         public void Aggiorna()
         {
             listView1.Items.Clear();
+
             double n = 0;
             foreach (KeyValuePair<string, double> p in lista)
             {
@@ -44,9 +45,10 @@ namespace GestionaleFestino
         {
             try
             {
-                double d = Convert.ToDouble(textBox2.Text);
-                lista.Add(textBox1.Text, d);
+                double n = Convert.ToDouble(textBox2.Text);
+                lista.Add(textBox1.Text, n);
                 Aggiorna();
+
                 textBox1.Clear();
                 textBox2.Clear();
             }
